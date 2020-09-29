@@ -1,0 +1,187 @@
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE DATABASE "Fitness_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE "Fitness_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (30.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Fitness_api_development"[0m
+  [1m[35m (22.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Fitness_api_test"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Fitness_api_development"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Fitness_api_test"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Fitness_api_development"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Fitness_api_test"[0m
+  [1m[35m (71.9ms)[0m  [1m[35mCREATE DATABASE "Fitness_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (91.3ms)[0m  [1m[35mCREATE DATABASE "Fitness_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (12.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(28760061360445800)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFitnesses (20200926015154)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "fitnesses" ("id" bigserial primary key, "name" character varying, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200926015154"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-26 02:23:11.885018"], ["updated_at", "2020-09-26 02:23:11.885018"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(28760061360445800)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFitness Create (0.4ms)[0m  [1m[32mINSERT INTO "fitnesses" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Lunges"], ["description", "A lunge can refer to any position of the human body where one leg is positioned forward with knee bent and foot flat on the ground while the other leg is positioned behind. "], ["created_at", "2020-09-26 02:31:06.025073"], ["updated_at", "2020-09-26 02:31:06.025073"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFitness Create (0.3ms)[0m  [1m[32mINSERT INTO "fitnesses" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Jumping Jacks "], ["description", "A jumping jack, also known as a star jump and called a side-straddle hop in the US military, is a physical jumping exercise performed by jumping to a position with the legs spread wide and the hands going overhead, sometimes in a clap, and then returning to a position with the feet together and the arms at the sides."], ["created_at", "2020-09-26 02:31:06.034263"], ["updated_at", "2020-09-26 02:31:06.034263"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFitness Create (0.2ms)[0m  [1m[32mINSERT INTO "fitnesses" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Crunches"], ["description", "The crunch is a classic core exercise. It specifically trains your abdominal muscles, which are part of your core. ... It also includes your oblique muscles on the sides of your trunk, as well as the muscles in your pelvis, lower back, and hips. Together, these muscles help stabilize your body."], ["created_at", "2020-09-26 02:31:06.037982"], ["updated_at", "2020-09-26 02:31:06.037982"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFitness Create (0.2ms)[0m  [1m[32mINSERT INTO "fitnesses" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Push ups"], ["description", "The crunch is a classic core exercise. It specifically trains your abdominal muscles, which are part of your core. ... It also includes your oblique muscles on the sides of your trunk, as well as the muscles in your pelvis, lower back, and hips. Together, these muscles help stabilize your body."], ["created_at", "2020-09-26 02:31:06.041683"], ["updated_at", "2020-09-26 02:31:06.041683"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFitness Create (0.2ms)[0m  [1m[32mINSERT INTO "fitnesses" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Sit ups"], ["description", "Situps are classic abdominal exercises done by lying on your back and lifting your torso. They use your body weight to strengthen and tone the core-stabilizing abdominal muscles. Situps work the rectus abdominis, transverse abdominis, and obliques in addition to your hip flexors, chest, and neck."], ["created_at", "2020-09-26 02:31:06.045099"], ["updated_at", "2020-09-26 02:31:06.045099"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFitness Create (0.2ms)[0m  [1m[32mINSERT INTO "fitnesses" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Tricep dips"], ["description", "Slide your butt off the front of the bench with your legs extended out in front of you. Straighten your arms, keeping a little bend in your elbows to keep tension on your triceps and off your elbow joints. Slowly bend your elbows to lower your body toward the floor until your elbows are at about a 90-degree angle."], ["created_at", "2020-09-26 02:31:06.048695"], ["updated_at", "2020-09-26 02:31:06.048695"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFitness Create (0.2ms)[0m  [1m[32mINSERT INTO "fitnesses" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Jumping Lunges"], ["description", "The jump lunge is an advanced variation of a basic walking lunge exercise, bumping up the intensity by adding a jump. The plyometric transition consists of jumping high in the air and switching your forward foot before landing. ... Because this exercise requires no equipment, you can do it any time and at any place."], ["created_at", "2020-09-26 02:31:06.052210"], ["updated_at", "2020-09-26 02:31:06.052210"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFitness Create (0.2ms)[0m  [1m[32mINSERT INTO "fitnesses" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Squats"], ["description", "A squat is a strength exercise in which the trainee lowers their hips from a standing position and then stands back up. During the descent of a squat, the hip and knee joints flex while the ankle joint dorsiflexes; conversely the hip and knee joints extend and the ankle joint plantarflexes when standing up."], ["created_at", "2020-09-26 02:31:06.055527"], ["updated_at", "2020-09-26 02:31:06.055527"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFitness Create (0.2ms)[0m  [1m[32mINSERT INTO "fitnesses" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mountain Climbers"], ["description", "Mountain Climbers are a killer exercise that get your heart rate up fast while also firing nearly every muscle group in the body—deltoids, biceps, triceps, chest, obliques, abdominals, quads, hamstrings and hip abductors. It's truly a fully body workout!"], ["created_at", "2020-09-26 02:31:06.058747"], ["updated_at", "2020-09-26 02:31:06.058747"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFitness Create (0.2ms)[0m  [1m[32mINSERT INTO "fitnesses" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Burpees"], ["description", "The burpee, a squat thrust with an additional stand between reps, is a full body exercise used in strength training and as an aerobic exercise. The basic movement is performed in four steps and known as a Begin in a standing position. Move into a squat position with your hands on the ground."], ["created_at", "2020-09-26 02:31:06.061971"], ["updated_at", "2020-09-26 02:31:06.061971"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFitness Create (0.2ms)[0m  [1m[32mINSERT INTO "fitnesses" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Jump Squats"], ["description", "Hinge at the hips to push your butt back and lower down until your thighs are parallel to the floor. Then press your feet down to explode off the floor and jump as high as you can. Allow your knees to bend 45 degrees when you land, and then immediately drop back down into a squat, and jump again."], ["created_at", "2020-09-26 02:31:06.065085"], ["updated_at", "2020-09-26 02:31:06.065085"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2020-09-25 22:32:14 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/samuel/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/samuel/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.0ms | Allocations: 407)
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 2241)
+
+
+Started GET "/fitnesses" for ::1 at 2020-09-25 22:32:18 -0400
+Processing by FitnessesController#index as HTML
+  [1m[36mFitness Load (0.4ms)[0m  [1m[34mSELECT "fitnesses".* FROM "fitnesses"[0m
+  ↳ app/controllers/fitnesses_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 9.5ms | ActiveRecord: 3.8ms | Allocations: 5449)
+
+
+Started GET "/" for ::1 at 2020-09-26 14:39:29 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/samuel/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/samuel/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.3ms | Allocations: 295)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 1537)
+
+
+Started GET "/fitnesses" for ::1 at 2020-09-26 14:40:20 -0400
+Processing by FitnessesController#index as HTML
+  [1m[36mFitness Load (1.0ms)[0m  [1m[34mSELECT "fitnesses".* FROM "fitnesses"[0m
+  ↳ app/controllers/fitnesses_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 4.7ms | Allocations: 5450)
+
+
+Started GET "/" for ::1 at 2020-09-26 14:40:27 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/samuel/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/samuel/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.0ms | Allocations: 182)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 719)
+
+
+Started GET "/fitnesses" for ::1 at 2020-09-26 14:40:33 -0400
+Processing by FitnessesController#index as HTML
+  [1m[36mFitness Load (0.6ms)[0m  [1m[34mSELECT "fitnesses".* FROM "fitnesses"[0m
+  ↳ app/controllers/fitnesses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.6ms | Allocations: 2012)
+
+
+Started GET "/" for ::1 at 2020-09-26 17:39:48 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/samuel/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/samuel/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.5ms | Allocations: 295)
+Completed 200 OK in 14ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 1538)
+
+
+Started GET "/" for ::1 at 2020-09-26 20:59:14 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/samuel/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/samuel/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 12.3ms | Allocations: 184)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 722)
+
+
+Started GET "/fitnesses" for ::1 at 2020-09-26 20:59:17 -0400
+Processing by FitnessesController#index as HTML
+  [1m[36mFitness Load (4.0ms)[0m  [1m[34mSELECT "fitnesses".* FROM "fitnesses"[0m
+  ↳ app/controllers/fitnesses_controller.rb:8:in `index'
+Completed 200 OK in 41ms (Views: 16.5ms | ActiveRecord: 20.0ms | Allocations: 5497)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-09-26 20:59:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-09-28 22:57:21 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/samuel/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/samuel/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.1ms | Allocations: 295)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 1537)
+
+
+Started GET "/fitnesses" for ::1 at 2020-09-28 22:57:34 -0400
+Processing by FitnessesController#index as HTML
+  [1m[36mFitness Load (1.2ms)[0m  [1m[34mSELECT "fitnesses".* FROM "fitnesses"[0m
+  ↳ app/controllers/fitnesses_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 10.5ms | ActiveRecord: 6.1ms | Allocations: 5450)
+
+
+Started GET "/" for ::1 at 2020-09-28 22:57:40 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/samuel/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/samuel/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.2ms | Allocations: 179)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 714)
+
+
